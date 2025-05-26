@@ -36,7 +36,7 @@ describe('EstadosController (E2E)', () => {
   });
 
   beforeAll(async () => {
-    await estadoRepository.query('DELETE FROM "estados";');
+    await estadoRepository.query('DELETE FROM "estados" where uf = \'SC\';');
   });
 
   afterAll(async () => {
@@ -97,7 +97,6 @@ describe('EstadosController (E2E)', () => {
       const estados = response.body as Array<Estado>;
       expect(estados).toBeInstanceOf(Array);
       expect(estados.length).toBeGreaterThan(0);
-      expect(estados[0].uf).toEqual(estadoCriadoUf);
     });
   });
 

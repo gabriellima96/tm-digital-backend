@@ -11,10 +11,15 @@ import {
 import { EstadosService } from './estados.service';
 import { CreateEstadoDto } from './dto/create-estado.dto';
 import { Estado } from './entities/estado.entity';
+import { MunicipiosService } from '../municipios/municipios.service';
+import { Municipio } from '../municipios/entities/municipio.entity';
 
 @Controller('estados')
 export class EstadosController {
-  constructor(private readonly estadosService: EstadosService) {}
+  constructor(
+    private readonly estadosService: EstadosService,
+    private readonly municipiosService: MunicipiosService,
+  ) {}
 
   @Post()
   @HttpCode(HttpStatus.CREATED)
@@ -35,5 +40,12 @@ export class EstadosController {
   @Get('uf/:uf')
   async buscarPorUf(@Param('uf') uf: string): Promise<Estado> {
     return this.estadosService.buscarPorUf(uf.toUpperCase());
+  }
+
+  @Get(':id/municipios')
+  async buscarMunicipiosDoEstado(
+    @Param('id', new ParseUUIDPipe({ version: '4' })) id: string,
+  ): Promise<Municipio[]> {
+    return this.municipiosService.buscarTodos(id);
   }
 }
