@@ -7,6 +7,7 @@ import { EstadosModule } from './estados/estados.module';
 import { MunicipiosModule } from './municipios/municipios.module';
 import { ProprietariosModule } from './proprietarios/proprietarios.module';
 import { CulturasModule } from './culturas/culturas.module';
+import { PropriedadesRuraisModule } from './propriedades-rurais/propriedades-rurais.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { CulturasModule } from './culturas/culturas.module';
     MunicipiosModule,
     ProprietariosModule,
     CulturasModule,
+    PropriedadesRuraisModule,
   ],
   controllers: [AppController],
   providers: [AppService],

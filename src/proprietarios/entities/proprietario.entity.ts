@@ -6,7 +6,10 @@ import {
   UpdateDateColumn,
   Unique,
   Check,
+  ManyToMany,
 } from 'typeorm';
+
+import { PropriedadeRural } from '../../propriedades-rurais/entities/propriedade-rural.entity';
 
 @Entity('proprietarios')
 @Unique(['cpf'])
@@ -23,6 +26,9 @@ export class Proprietario {
 
   @Column({ type: 'integer', name: 'pontuacao_credito', nullable: false })
   pontuacaoCredito: number;
+
+  @ManyToMany(() => PropriedadeRural, (propriedade) => propriedade.proprietarios)
+  propriedadesRurais: PropriedadeRural[];
 
   @CreateDateColumn({ name: 'created_at' })
   dataCriacao: Date;
