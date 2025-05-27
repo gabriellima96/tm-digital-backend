@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { EstadosModule } from './estados/estados.module';
 import { MunicipiosModule } from './municipios/municipios.module';
 import { ProprietariosModule } from './proprietarios/proprietarios.module';
+import { CulturasModule } from './culturas/culturas.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { ProprietariosModule } from './proprietarios/proprietarios.module';
     EstadosModule,
     MunicipiosModule,
     ProprietariosModule,
+    CulturasModule,
   ],
   controllers: [AppController],
   providers: [AppService],
