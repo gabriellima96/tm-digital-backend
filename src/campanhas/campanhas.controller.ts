@@ -9,6 +9,7 @@ import {
   ParseUUIDPipe,
   HttpCode,
   HttpStatus,
+  UseGuards,
 } from '@nestjs/common';
 import { CampanhasService } from './campanhas.service';
 import { CreateCampanhaDto } from './dto/create-campanha.dto';
@@ -16,7 +17,9 @@ import { UpdateCampanhaDto } from './dto/update-campanha.dto';
 import { CampanhaProspeccao } from './entities/campanha.entity';
 import { LeadsService } from 'src/leads/leads.service';
 import { Lead } from '../leads/entities/lead.entity';
+import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 
+@UseGuards(JwtAuthGuard)
 @Controller('campanhas')
 export class CampanhasController {
   constructor(

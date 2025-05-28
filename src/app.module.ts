@@ -11,6 +11,7 @@ import { PropriedadesRuraisModule } from './propriedades-rurais/propriedades-rur
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { CampanhasModule } from './campanhas/campanhas.module';
 import { LeadsModule } from './leads/leads.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { LeadsModule } from './leads/leads.module';
     UsuariosModule,
     CampanhasModule,
     LeadsModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
