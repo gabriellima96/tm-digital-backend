@@ -1,0 +1,52 @@
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Param,
+  Delete,
+  Patch,
+  ParseUUIDPipe,
+  HttpCode,
+  HttpStatus,
+} from '@nestjs/common';
+import { UsuariosService } from './usuarios.service';
+import { CreateUsuarioDto } from './dto/create-usuario.dto';
+import { UpdateUsuarioDto } from './dto/update-usuario.dto';
+import { Usuario } from './entities/usuario.entity';
+
+@Controller('usuarios')
+export class UsuariosController {
+  constructor(private readonly usuariosService: UsuariosService) {}
+  @Post()
+  @HttpCode(HttpStatus.CREATED)
+  async criar(@Body() criarUsuarioDto: CreateUsuarioDto): Promise<Usuario> {
+    return this.usuariosService.criar(criarUsuarioDto);
+  }
+
+  @Get()
+  async buscarTodos(): Promise<Usuario[]> {
+    return this.usuariosService.buscarTodos();
+  }
+
+  @Get(':id')
+  async buscarUmPorId(
+    @Param('id', new ParseUUIDPipe({ version: '4' })) id: string,
+  ): Promise<Usuario> {
+    return this.usuariosService.buscarUmPorId(id);
+  }
+
+  @Patch(':id')
+  async atualizar(
+    @Param('id', new ParseUUIDPipe({ version: '4' })) id: string,
+    @Body() atualizarUsuarioDto: UpdateUsuarioDto,
+  ): Promise<Usuario> {
+    return this.usuariosService.atualizar(id, atualizarUsuarioDto);
+  }
+
+  @Delete(':id')
+  @HttpCode(HttpStatus.NO_CONTENT)
+  async remover(@Param('id', new ParseUUIDPipe({ version: '4' })) id: string): Promise<void> {
+    return this.usuariosService.remover(id);
+  }
+}
