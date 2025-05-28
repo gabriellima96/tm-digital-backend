@@ -1,0 +1,763 @@
+{
+	"info": {
+		"_postman_id": "de867a0e-1651-42a3-9d85-36fcc1a0f243",
+		"name": "tm-digital-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3226370"
+	},
+	"item": [
+		{
+			"name": "estados",
+			"item": [
+				{
+					"name": "estados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/estados",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"estados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estados by id municipios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/estados/aaa13753-da1a-473e-87fa-fd86e89ad9de/municipios",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"estados",
+								"aaa13753-da1a-473e-87fa-fd86e89ad9de",
+								"municipios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estados",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"São Paulo\",\r\n    \"uf\": \"SP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/estados",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"estados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estados by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/estados/712252da-090f-45e8-b403-36f15c910446",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"estados",
+								"712252da-090f-45e8-b403-36f15c910446"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estados by uf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/estados/uf/SP",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"estados",
+								"uf",
+								"SP"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "culturas",
+			"item": [
+				{
+					"name": "culturas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/culturas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"culturas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "culturas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Soja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/culturas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"culturas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "culturas by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/culturas/d0960527-02d7-46d0-bef7-fe81d95d139e",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"culturas",
+								"d0960527-02d7-46d0-bef7-fe81d95d139e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "culturas by nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/culturas/nome/Soja",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"culturas",
+								"nome",
+								"Soja"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "municipios",
+			"item": [
+				{
+					"name": "municipios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Maceéio2\",\r\n    \"idEstado\": \"aaa13753-da1a-473e-87fa-fd86e89ad9de\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/municipios",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"municipios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "proprietarios",
+			"item": [
+				{
+					"name": "proprietarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gabriel Lima Silva\",\r\n    \"cpf\": \"062.792.754-82\",\r\n    \"pontuacaoCredito\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/proprietarios",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"proprietarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "proprietarios",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gabriel Lima Silva\",\r\n    \"cpf\": \"062.792.754-85\",\r\n    \"pontuacaoCredito\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/proprietarios/581f7777-2054-4817-b12c-51dc94219644",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"proprietarios",
+								"581f7777-2054-4817-b12c-51dc94219644"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "proprietarios",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/proprietarios/581f7777-2054-4817-b12c-51dc94219644",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"proprietarios",
+								"581f7777-2054-4817-b12c-51dc94219644"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "proprietarios by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/proprietarios/581f7777-2054-4817-b12c-51dc94219644",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"proprietarios",
+								"581f7777-2054-4817-b12c-51dc94219644"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "proprietarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/proprietarios",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"proprietarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "proprietarios by cpf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/proprietarios/cpf/062.792.754-85",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"proprietarios",
+								"cpf",
+								"062.792.754-85"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "propriedades-rurais",
+			"item": [
+				{
+					"name": "propriedades-rurais",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeFazenda\": \"Fazenda o Sol já nasceu\",\r\n    \"poligono\": {\r\n        \"type\": \"Polygon\",\r\n        \"coordinates\": [\r\n            [\r\n                [\r\n                    -43.1800,\r\n                    -22.9000\r\n                ],\r\n                [\r\n                    -43.1700,\r\n                    -22.9000\r\n                ],\r\n                [\r\n                    -43.1700,\r\n                    -22.8900\r\n                ],\r\n                [\r\n                    -43.1800,\r\n                    -22.8900\r\n                ],\r\n                [\r\n                    -43.1800,\r\n                    -22.9000\r\n                ]\r\n            ]\r\n        ]\r\n    },\r\n    \"areaEmHectares\": 150.75,\r\n    \"idMunicipio\": \"12934f74-0bca-4abd-ad48-46d69836d375\",\r\n    \"indiceProdutividade\": 85.5,\r\n    \"idsProprietarios\": [\r\n        \"e188b312-f7e3-4343-8b0c-9532149e2a4f\"\r\n    ],\r\n    \"idsCulturas\": [\r\n        \"819f9ca0-b9b3-42f2-b290-344f6e38fa24\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/propriedades-rurais",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"propriedades-rurais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "propriedades-rurais",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeFazenda\": \"Fazenda o Sol já nasceu\",\r\n    \"poligono\": {\r\n        \"type\": \"Polygon\",\r\n        \"coordinates\": [\r\n            [\r\n                [\r\n                    -43.1800,\r\n                    -22.9000\r\n                ],\r\n                [\r\n                    -43.1700,\r\n                    -22.9000\r\n                ],\r\n                [\r\n                    -43.1700,\r\n                    -22.8900\r\n                ],\r\n                [\r\n                    -43.1800,\r\n                    -22.8900\r\n                ],\r\n                [\r\n                    -43.1800,\r\n                    -22.9000\r\n                ]\r\n            ]\r\n        ]\r\n    },\r\n    \"areaEmHectares\": 150.75,\r\n    \"idMunicipio\": \"38e0a7ba-6cd4-45b1-8836-324836140a40\",\r\n    \"indiceProdutividade\": 85.5,\r\n    \"idsProprietarios\": [\r\n        \"4625f957-6193-410a-904d-b1cdc3255878\"\r\n    ],\r\n    \"idsCulturas\": [\r\n        \"a556ccbe-fedd-43fd-82e9-2c499644aa82\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/propriedades-rurais/d5deefbd-2d67-43a3-bf27-965f0a101c03",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"propriedades-rurais",
+								"d5deefbd-2d67-43a3-bf27-965f0a101c03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "propriedades-rurais",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/propriedades-rurais/d5deefbd-2d67-43a3-bf27-965f0a101c03",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"propriedades-rurais",
+								"d5deefbd-2d67-43a3-bf27-965f0a101c03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "propriedades-rurais by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/propriedades-rurais/d5deefbd-2d67-43a3-bf27-965f0a101c03",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"propriedades-rurais",
+								"d5deefbd-2d67-43a3-bf27-965f0a101c03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "propriedades-rurais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/propriedades-rurais",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"propriedades-rurais"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "usuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Ana Silva\",\r\n  \"email\": \"ana.silva1@example.com.br\",\r\n  \"senha\": \"Password@123\",\r\n  \"cargo\": \"agente\",\r\n  \"ativo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/usuarios",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuarios",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Ana Silva\",\r\n  \"email\": \"ana.silva@example.com.br\",\r\n  \"senha\": \"Password@123\",\r\n  \"cargo\": \"agente\",\r\n  \"ativo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/usuarios/72e9f64d-d404-4cba-ba26-3e396e5f9353",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"usuarios",
+								"72e9f64d-d404-4cba-ba26-3e396e5f9353"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuarios",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/usuarios/72e9f64d-d404-4cba-ba26-3e396e5f9353",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"usuarios",
+								"72e9f64d-d404-4cba-ba26-3e396e5f9353"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuarios by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/usuarios/4de4ce0e-e51f-45dd-bc4f-66e282c1dd21",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"usuarios",
+								"4de4ce0e-e51f-45dd-bc4f-66e282c1dd21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/usuarios",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "campanhas",
+			"item": [
+				{
+					"name": "campanhas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Campanha Soja Verão 2025/2026 - MG Central\",\r\n  \"descricao\": \"Campanha focada em produtores de soja na região central de Minas Gerais para a safra de verão 2025/2026, com foco em fertilizantes de alta performance.\",\r\n  \"dataInicio\": \"2025-09-01T00:00:00.000Z\",\r\n  \"dataFim\": \"2026-02-28T23:59:59.000Z\",\r\n  \"status\": \"planejada\",\r\n  \"criteriosFiltragem\": {\r\n    \"municipioIds\": [\r\n      \"12934f74-0bca-4abd-ad48-46d69836d375\"\r\n    ],\r\n    \"culturaPrimariaId\": \"819f9ca0-b9b3-42f2-b290-344f6e38fa24\",\r\n    \"areaMinimaHectares\": 100,\r\n    \"areaMaximaHectares\": 1000,\r\n    \"indiceProdutividadeMinimo\": 60\r\n  },\r\n  \"metasConversao\": \"Atingir 50 novos clientes, com um volume de vendas de R$ 2.000.000 em fertilizantes para soja.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/campanhas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campanhas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "campanhas gerar leads",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/campanhas/72b0355f-8607-4f3e-97cf-b77acc32612a/gerar-leads",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campanhas",
+								"72b0355f-8607-4f3e-97cf-b77acc32612a",
+								"gerar-leads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "campanhas leads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/campanhas/72b0355f-8607-4f3e-97cf-b77acc32612a/leads",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campanhas",
+								"72b0355f-8607-4f3e-97cf-b77acc32612a",
+								"leads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "campanhas",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Campanha Soja Verão 2025/2026 - MG Central\",\r\n  \"descricao\": \"Campanha focada em produtores de soja na região central de Minas Gerais para a safra de verão 2025/2026, com foco em fertilizantes de alta performance.\",\r\n  \"dataInicio\": \"2025-09-01T00:00:00.000Z\",\r\n  \"dataFim\": \"2026-02-28T23:59:59.000Z\",\r\n  \"status\": \"planejada\",\r\n  \"criteriosFiltragem\": {\r\n    \"municipioIds\": [\r\n      \"uuid-municipio-betim-exemplo\",\r\n      \"uuid-municipio-contagem-exemplo\"\r\n    ],\r\n    \"culturaPrimariaId\": \"uuid-cultura-soja-exemplo\",\r\n    \"areaMinimaHectares\": 100,\r\n    \"areaMaximaHectares\": 1000,\r\n    \"indiceProdutividadeMinimo\": 60,\r\n    \"excluirClientesAtuais\": true,\r\n    \"faixaScoreCredito\": {\r\n      \"min\": 70,\r\n      \"max\": 100\r\n    }\r\n  },\r\n  \"metasConversao\": \"Atingir 50 novos clientes, com um volume de vendas de R$ 2.000.000 em fertilizantes para soja.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/campanhas/a0096789-4b7d-4ec7-accf-961676bc35f2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campanhas",
+								"a0096789-4b7d-4ec7-accf-961676bc35f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "campanhas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/campanhas/a0096789-4b7d-4ec7-accf-961676bc35f2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campanhas",
+								"a0096789-4b7d-4ec7-accf-961676bc35f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "campanhas by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/campanhas/75574061-8928-4d5a-ae90-aadac442de97",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campanhas",
+								"75574061-8928-4d5a-ae90-aadac442de97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "campanhas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/campanhas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campanhas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ana.silva1@example.com.br\",\r\n    \"senha\": \"Password@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
