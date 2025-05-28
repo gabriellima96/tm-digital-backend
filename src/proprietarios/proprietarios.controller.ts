@@ -9,12 +9,15 @@ import {
   ParseUUIDPipe,
   HttpCode,
   HttpStatus,
+  UseGuards,
 } from '@nestjs/common';
 import { ProprietariosService } from './proprietarios.service';
 import { CreateProprietarioDto } from './dto/create-proprietario.dto';
 import { UpdateProprietarioDto } from './dto/update-proprietario.dto';
 import { Proprietario } from './entities/proprietario.entity';
+import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 
+@UseGuards(JwtAuthGuard)
 @Controller('proprietarios')
 export class ProprietariosController {
   constructor(private readonly proprietariosService: ProprietariosService) {}

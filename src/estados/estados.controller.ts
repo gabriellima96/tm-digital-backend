@@ -7,13 +7,16 @@ import {
   ParseUUIDPipe,
   HttpCode,
   HttpStatus,
+  UseGuards,
 } from '@nestjs/common';
 import { EstadosService } from './estados.service';
 import { CreateEstadoDto } from './dto/create-estado.dto';
 import { Estado } from './entities/estado.entity';
 import { MunicipiosService } from '../municipios/municipios.service';
 import { Municipio } from '../municipios/entities/municipio.entity';
+import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 
+@UseGuards(JwtAuthGuard)
 @Controller('estados')
 export class EstadosController {
   constructor(

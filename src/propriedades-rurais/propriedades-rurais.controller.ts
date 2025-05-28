@@ -9,12 +9,15 @@ import {
   ParseUUIDPipe,
   HttpCode,
   HttpStatus,
+  UseGuards,
 } from '@nestjs/common';
 import { PropriedadesRuraisService } from './propriedades-rurais.service';
 import { CreatePropriedadeRuralDto } from './dto/create-propriedade-rural.dto';
 import { UpdatePropriedadeRuralDto } from './dto/update-propriedade-rural.dto';
 import { PropriedadeRural } from './entities/propriedade-rural.entity';
+import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 
+@UseGuards(JwtAuthGuard)
 @Controller('propriedades-rurais')
 export class PropriedadesRuraisController {
   constructor(private readonly propriedadesRuraisService: PropriedadesRuraisService) {}
