@@ -10,6 +10,7 @@ import { CulturasModule } from './culturas/culturas.module';
 import { PropriedadesRuraisModule } from './propriedades-rurais/propriedades-rurais.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { CampanhasModule } from './campanhas/campanhas.module';
+import { LeadsModule } from './leads/leads.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { CampanhasModule } from './campanhas/campanhas.module';
     PropriedadesRuraisModule,
     UsuariosModule,
     CampanhasModule,
+    LeadsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
