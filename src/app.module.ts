@@ -9,6 +9,7 @@ import { ProprietariosModule } from './proprietarios/proprietarios.module';
 import { CulturasModule } from './culturas/culturas.module';
 import { PropriedadesRuraisModule } from './propriedades-rurais/propriedades-rurais.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
+import { CampanhasModule } from './campanhas/campanhas.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { UsuariosModule } from './usuarios/usuarios.module';
     CulturasModule,
     PropriedadesRuraisModule,
     UsuariosModule,
+    CampanhasModule,
   ],
   controllers: [AppController],
   providers: [AppService],
