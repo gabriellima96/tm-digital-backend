@@ -293,5 +293,7 @@ Abaixo está uma representação visual simplificada do esquema do banco de dado
 Para facilitar os testes e a exploração da API, você pode importar uma coleção de requisições para o Postman ou Insomnia.
 
 [Baixar Coleção do Postman](https://github.com/gabriellima96/tm-digital-backend/blob/main/collections/tm-digital-backend.postman_collection.json)
+
 [Baixar Environment](https://github.com/gabriellima96/tm-digital-backend/blob/main/collections/local.postman_environment.json)
+
 ---
