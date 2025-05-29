@@ -68,7 +68,7 @@ A solução visa permitir que o cliente identifique onde e como pode expandir se
           DB_USER=admin
           DB_PASSWORD=secret
           DB_NAME=postgres
-          DB_HOST=localhost # Nome do serviço do banco no docker-compose
+          DB_HOST=db # Nome do serviço do banco no docker-compose
           DB_PORT_CONTAINER=5432 # Porta interna do container do DB
           DB_PORT_HOST=5432 # Porta do host para acessar o DB
 
