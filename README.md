@@ -200,10 +200,6 @@ O projeto segue a arquitetura modular padrão do NestJS:
 * `docker-compose.yml`: Para orquestrar os serviços Docker (app e banco de dados).
 * `.env`: Arquivo para variáveis de ambiente (não versionado).
 * `.eslintrc.js`, `.prettierrc.js`, `.editorconfig`: Arquivos de configuração para linting e formatação.
----
-Entendido! Vamos adicionar essas duas seções ao seu README.md: uma para o esquema do banco de dados e outra para a coleção de APIs (Postman/Insomnia).
-
-Markdown
 
 ## Visão Geral dos Endpoints da API
 
