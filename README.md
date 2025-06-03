@@ -192,10 +192,6 @@ O projeto segue a arquitetura modular padrão do NestJS:
 * `docker-compose.yml`: Para orquestrar os serviços Docker (app e banco de dados).
 * `.env`: Arquivo para variáveis de ambiente (não versionado).
 * `.eslintrc.js`, `.prettierrc.js`, `.editorconfig`: Arquivos de configuração para linting e formatação.
----
-Entendido! Vamos adicionar essas duas seções ao seu README.md: uma para o esquema do banco de dados e outra para a coleção de APIs (Postman/Insomnia).
-
-Markdown
 
 ## Visão Geral dos Endpoints da API
 
@@ -264,7 +260,7 @@ A seguir, uma lista dos principais grupos de endpoints. Recomenda-se o uso de um
 
 Abaixo está uma representação visual simplificada do esquema do banco de dados e suas principais tabelas e relacionamentos.
 
-`![Diagrama do Banco de Dados](caminho/para/sua/imagem_do_diagrama.png)`
+![Diagrama do Banco de Dados](https://github.com/gabriellima96/tm-digital-backend/blob/main/postgres%20-%20public.png)
 
 **Principais Tabelas:**
 * `usuarios` 
@@ -280,10 +276,12 @@ Abaixo está uma representação visual simplificada do esquema do banco de dado
 * `migrations_history` (histórico de migrações do TypeORM)
 
 ---
-## Coleção da API (Postman/Insomnia) collection_api
+## Coleção da API (Postman/Insomnia)
 
 Para facilitar os testes e a exploração da API, você pode importar uma coleção de requisições para o Postman ou Insomnia.
 
-`[Baixar Coleção do Postman](docs/BFF_Agro_TerraMagna_Postman_Collection.json)`
+[Baixar Coleção do Postman](https://github.com/gabriellima96/tm-digital-backend/blob/main/collections/tm-digital-backend.postman_collection.json)
+
+[Baixar Environment](https://github.com/gabriellima96/tm-digital-backend/blob/main/collections/local.postman_environment.json)
 
 ---
