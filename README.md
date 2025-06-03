@@ -62,41 +62,33 @@ A solução visa permitir que o cliente identifique onde e como pode expandir se
     * Preencha o arquivo `.env` com as configurações necessárias (portas, credenciais do banco, segredo JWT, etc.).
         Exemplo de `.env`:
         ```env
-          PORT=3000
-          APP_PORT_HOST=3000 # Porta do host para acessar a app
+            PORT=3000
+            APP_PORT_HOST=3000 # Porta do host para acessar a app
 
-          DB_USER=admin
-          DB_PASSWORD=secret
-          DB_NAME=postgres
-          DB_HOST=localhost # Nome do serviço do banco no docker-compose
-          DB_PORT_CONTAINER=5432 # Porta interna do container do DB
-          DB_PORT_HOST=5432 # Porta do host para acessar o DB
+            DB_USER=postgres
+            DB_PASSWORD=postgres
+            DB_NAME=postgres
+            DB_HOST=db # Nome do serviço do banco no docker-compose
+            DB_PORT_CONTAINER=5432 # Porta interna do container do DB
+            DB_PORT_HOST=5432 # Porta do host para acessar o DB
 
-          NODE_ENV=development
+            NODE_ENV=development
 
-          JWT_SECRET=segredosupersecreto
-          JWT_EXPIRATION_TIME=3600s
+            JWT_SECRET=segredosupersecreto
+            JWT_EXPIRATION_TIME=3600s
         ```
 
-3.  **Instalar Dependências do Projeto:**
-    ```bash
-    npm install
-    # ou
-    # yarn install
-    ```
-
-4.  **Iniciar os Contêineres Docker (Aplicação + Banco de Dados):**
+3.  **Iniciar os Contêineres Docker (Aplicação + Banco de Dados):**
     ```bash
     docker-compose up --build -d
     ```
 
-5.  **Executar as Migrações do Banco de Dados:**
-    Após os contêineres estarem rodando (especialmente o do banco de dados), execute as migrações para criar as tabelas:
+4.  **Executar as Migrações do Banco de Dados:**
     ```bash
-    npm run migration:run
+    docker-compose exec app npm run migration:run
     ```
-6.  **A Aplicação Estará Rodando:**
-    * A API estará acessível em `http://localhost:PORTA_CONFIGURADA` (ex: `http://localhost:3000`).
+5.  **A Aplicação Estará Rodando:**
+    * A API estará acessível em `http://localhost:3000`.
 
 ## Executando a Aplicação (Desenvolvimento Local Fora do Docker, após setup inicial)
 
